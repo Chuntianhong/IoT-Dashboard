@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">IoT</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <!-- MainActivity strings -->
+    <string name="data_simulation_started">Start Simulation</string>
+    <string name="data_simulation_stopped">Stop Simulation</string>
+    <string name="simulation_started_msg">Data simulation started</string>
+    <string name="simulation_stopped_msg">Data simulation stopped</string>
+    <string name="stop">Stop</string>
+    <string name="connected_to_esp32">Connected to ESP32</string>
+    <string name="disconnected_from_esp32">Disconnected from ESP32</string>
+    <string name="time_format">HH:mm:ss</string>
+    <string name="last_update_format">Last update: %s</string>
+    <string name="clicked_on_format">Clicked on %s</string>
+    
+    <!-- GaugeAdapter strings -->
+    <string name="source_format"> (Source: %d)</string>
+    <string name="not_configured">Not Configured</string>
+    <string name="click_to_configure">Click ⚙ to configure</string>
+    
+    <!-- AnalogInput strings -->
+    <string name="analog_input_format">Analog Input %d</string>
+    <string name="voltage_0_10v">0-10V</string>
+    <string name="current_4_20ma">4-20mA</string>
+    <string name="round_gauge">Round Gauge</string>
+    <string name="bar_chart">Bar Chart</string>
+    <string name="trend_chart">Trend Chart</string>
+    <string name="not_configured_desc">Not configured</string>
+    <string name="formatted_value_format">%.2f %s</string>
+    
+    <!-- GaugeSettingsDialog strings -->
+    <string name="input_format">Input %d (%s)</string>
+    
+    <!-- SettingsActivity strings -->
+    <string name="analog_input_settings">Analog Input Settings</string>
+    <string name="configuration_updated_format">Configuration updated for %s</string>
+    
+    <!-- IoTDataManager strings -->
+    <string name="prefs_name">iot_gauge_settings</string>
+    <string name="key_analog_inputs">analog_inputs</string>
+    <string name="empty_unit"></string>
+    
+    <!-- Debug strings for TrendChartView -->
+    <string name="debug_switched_to_scrolling">Switched to scrolling mode. LeftHalf: %d, RightHalf: %d</string>
+    <string name="debug_oscilloscope_shift">Oscilloscope shift: LeftHalf: %d, RightHalf: %d</string>
+    <string name="debug_starting_test">Starting oscilloscope test…</string>
+    <string name="debug_should_switch">Should switch to scrolling mode now</string>
+    <string name="debug_should_shift">Should have done first oscilloscope shift</string>
+    <string name="debug_test_complete">Test complete. Final state - isScrollingMode: %b, LeftHalf: %d, RightHalf: %d</string>
+    
+    <!-- Font paths -->
+    <string name="font_nunito_light">fonts/nunito-light.ttf</string>
+    <string name="font_nunito_regular">fonts/nunito-regular.ttf</string>
+    <string name="font_nunito_bold">fonts/nunito-bold.ttf</string>
+    
+    <!-- Layout descriptions -->
+    <string name="fixed_grid_description">Fixed 2x4 grid layout (2 rows, 4 columns) for all screens</string>
+</resources>

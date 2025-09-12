@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardBackgroundColor="@color/surface_white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:strokeColor="@color/divider"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.xsz.IoT.view.NunitoTextView
+                android:id="@+id/tv_input_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:letterSpacing="0.01"
+                android:text="Analog Input 1"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.xsz.IoT.view.NunitoLightTextView
+                android:id="@+id/tv_input_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_type_badge"
+                android:padding="5dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="0-10V"
+                android:textColor="@color/primary_blue"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- Gauge Container -->
+        <FrameLayout
+            android:id="@+id/gauge_container"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginVertical="2dp"
+            android:background="@drawable/gauge_background">
+
+            <!-- Round Gauge View -->
+            <com.xsz.IoT.view.RoundGaugeView
+                android:id="@+id/round_gauge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+
+            <!-- Bar Chart View -->
+            <com.xsz.IoT.view.BarChartView
+                android:id="@+id/bar_chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <!-- Trend Chart View -->
+            <com.xsz.IoT.view.TrendChartView
+                android:id="@+id/trend_chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <!-- Value Display -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.xsz.IoT.view.NunitoBoldTextView
+                android:id="@+id/tv_mapped_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.00 PSI"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.xsz.IoT.view.NunitoTextView
+                android:id="@+id/tv_raw_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00V"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- Description and Settings Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.xsz.IoT.view.NunitoLightTextView
+                android:id="@+id/tv_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Sensor description"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/btn_gauge_settings"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/ic_action_back"
+                android:minWidth="32dp"
+                android:minHeight="32dp"
+                android:padding="7dp"
+                android:src="@drawable/ic_menu_setting"
+                android:textSize="16sp"
+                app:tint="#ffffff" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
