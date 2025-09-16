@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Fixed 2x4 grid layout (2 rows, 4 columns) for all screens -->
-    <integer name="gauge_grid_columns">4</integer>
-    <integer name="gauge_grid_rows">2</integer>
-</resources>

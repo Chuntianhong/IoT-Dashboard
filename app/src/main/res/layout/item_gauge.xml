@@ -31,7 +31,7 @@
                 android:layout_weight="1"
                 android:letterSpacing="0.01"
                 android:text="Analog Input 1"
-                android:textColor="@color/text_primary"
+                android:textColor="@color/gauge_text_primary"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -94,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="0.00 PSI"
-                android:textColor="@color/text_primary"
+                android:textColor="@color/gauge_text_primary"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -103,7 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0.00V"
-                android:textColor="@color/text_secondary"
+                android:textColor="@color/gauge_text_secondary"
                 android:textSize="12sp" />
 
         </LinearLayout>
@@ -124,7 +124,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Sensor description"
-                android:textColor="@color/text_secondary"
+                android:textColor="@color/gauge_text_secondary"
                 android:textSize="12sp" />
 
             <ImageView

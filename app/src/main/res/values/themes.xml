@@ -6,9 +6,9 @@
         <item name="colorPrimaryVariant">@color/primary_blue</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorSecondary">@color/light_blue</item>
-        <item name="colorOnSecondary">@color/text_primary</item>
-        <item name="android:colorBackground">@color/text_primary</item>
-        <item name="colorSurface">@color/text_primary</item>
+        <item name="colorOnSecondary">@color/gauge_text_primary</item>
+        <item name="android:colorBackground">@color/gauge_text_primary</item>
+        <item name="colorSurface">@color/gauge_text_primary</item>
         <item name="colorOnSurface">@color/white</item>
         <item name="colorOnBackground">@color/white</item>
     </style>

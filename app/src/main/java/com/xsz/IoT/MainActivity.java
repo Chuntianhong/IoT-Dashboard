@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements GaugeAdapter.OnGa
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_iot, menu);
         simulationMenuItem = menu.findItem(R.id.action_simulation);
         updateSimulationMenuItem();
         return true;
@@ -185,8 +185,8 @@ public class MainActivity extends AppCompatActivity implements GaugeAdapter.OnGa
 
     @Override
     public void onGaugeClick(AnalogInput analogInput) {
-        Snackbar.make(findViewById(android.R.id.content), 
-                getString(R.string.clicked_on_format, analogInput.getName()), 
+        Snackbar.make(findViewById(android.R.id.content),
+                String.format("Clicked on %s", analogInput.getName()),
                 Snackbar.LENGTH_SHORT).show();
     }
 

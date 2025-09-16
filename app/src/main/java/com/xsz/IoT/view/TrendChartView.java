@@ -32,11 +32,9 @@ public class TrendChartView extends View {
     private static final int colorText = 0xffaab8be;
     private static final int colorValue = 0xff0acf97;
 
-    private int maxDataPoints = 200;
-    private Random random = new Random();
-    
+    private int MAX_DATA_POINTS = 200;
+
     // Scrolling behavior variables
-    private int currentDrawPosition = 0;  // Current position in the data array where we're drawing
     private boolean isScrollingMode = false;  // Whether we're in scrolling mode (phase 2/3)
     private final List<Float> leftHalfData = new ArrayList<>();  // Data points for left half of screen
     private final List<Float> rightHalfData = new ArrayList<>(); // Data points for right half of screen
@@ -160,7 +158,7 @@ public class TrendChartView extends View {
         
         if (!isScrollingMode) {
             // Phase 1: Normal left-to-right plotting (0 to maxDataPoints)
-            float xStep = chartWidth / (maxDataPoints - 1);
+            float xStep = chartWidth / (MAX_DATA_POINTS - 1);
             for (int i = 0; i < dataPoints.size(); i++) {
                 float x = padding + i * xStep;
                 float normalizedValue = (dataPoints.get(i) - minValue) / (maxValue - minValue);
@@ -179,7 +177,7 @@ public class TrendChartView extends View {
             
             // Draw left half data (shifted old data)
             if (hasLeftData) {
-                float leftXStep = halfWidth / (maxDataPoints / 2 - 1);
+                float leftXStep = halfWidth / (MAX_DATA_POINTS / 2 - 1);
                 for (int i = 0; i < leftHalfData.size(); i++) {
                     float x = padding + i * leftXStep;
                     float normalizedValue = (leftHalfData.get(i) - minValue) / (maxValue - minValue);
@@ -198,7 +196,7 @@ public class TrendChartView extends View {
             // Draw right half data (new data from center)
             if (hasRightData) {
                 float centerX = padding + halfWidth;
-                float rightXStep = halfWidth / ((float) maxDataPoints / 2 - 1);
+                float rightXStep = halfWidth / ((float) MAX_DATA_POINTS / 2 - 1);
                 
                 for (int i = 0; i < rightHalfData.size(); i++) {
                     float x = centerX + i * rightXStep;
@@ -225,12 +223,12 @@ public class TrendChartView extends View {
             // Phase 1: Normal left-to-right filling
             dataPoints.add(value);
             
-            if (dataPoints.size() >= maxDataPoints) {
+            if (dataPoints.size() >= MAX_DATA_POINTS) {
                 // Switch to scrolling mode: move last half of data to left half
                 isScrollingMode = true;
                 
                 // Take the last 50 points and move them to leftHalfData
-                int halfPoint = maxDataPoints / 2;
+                int halfPoint = MAX_DATA_POINTS / 2;
                 leftHalfData.clear();
                 for (int i = halfPoint; i < dataPoints.size(); i++) {
                     leftHalfData.add(dataPoints.get(i));
@@ -249,7 +247,7 @@ public class TrendChartView extends View {
             rightHalfData.add(value);
             
             // Check if right half is full (reached right edge)
-            if (rightHalfData.size() >= maxDataPoints / 2) {
+            if (rightHalfData.size() >= MAX_DATA_POINTS / 2) {
                 // Shift: move current rightHalfData to leftHalfData
                 leftHalfData.clear();
                 leftHalfData.addAll(rightHalfData);
@@ -313,7 +311,6 @@ public class TrendChartView extends View {
         leftHalfData.clear();
         rightHalfData.clear();
         isScrollingMode = false;
-        currentDrawPosition = 0;
         invalidate();
     }
     
@@ -323,39 +320,6 @@ public class TrendChartView extends View {
         } else {
             return leftHalfData.size() + rightHalfData.size();
         }
-    }
-    
-    public void initializeWithHistory(float currentValue) {
-        // Add some historical data points to make the trend more visible
-        /*if (getDataPointsCount() == 0) {
-            // Generate some initial historical data
-            for (int i = 0; i < 10; i++) {
-                float historicalValue = currentValue + (random.nextFloat() - 0.5f) * (maxValue - minValue) * 0.2f;
-                historicalValue = Math.max(minValue, Math.min(maxValue, historicalValue));
-                addDataPoint(historicalValue);
-            }
-        }*/
-    }
-    
-    // Debug method to test oscilloscope behavior
-    public void testOscilloscopeBehavior() {
-        clearData();
-        android.util.Log.d("TrendChart", getContext().getString(R.string.debug_starting_test));
-        
-        // Fill up to maxDataPoints to trigger scrolling mode
-        for (int i = 0; i < maxDataPoints + 50; i++) {
-            float testValue = (float) (50 + 30 * Math.sin(i * 0.1));
-            forceAddDataPoint(testValue);
-            
-            if (i == maxDataPoints - 1) {
-                android.util.Log.d("TrendChart", getContext().getString(R.string.debug_should_switch));
-            }
-            if (i == maxDataPoints + 25) {
-                android.util.Log.d("TrendChart", getContext().getString(R.string.debug_should_shift));
-            }
-        }
-        
-        android.util.Log.d("TrendChart", getContext().getString(R.string.debug_test_complete, isScrollingMode, leftHalfData.size(), rightHalfData.size()));
     }
 }
 

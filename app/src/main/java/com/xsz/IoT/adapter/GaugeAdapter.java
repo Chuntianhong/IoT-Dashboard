@@ -268,12 +268,12 @@ public class GaugeAdapter extends RecyclerView.Adapter<GaugeAdapter.GaugeViewHol
                     // Title removed - already shown in card header
                     
                     // Only initialize with history if chart is empty, otherwise just add new data
-                    if (trendChart.getDataPointsCount() == 0) {
+                    /*if (trendChart.getDataPointsCount() == 0) {
                         trendChart.initializeWithHistory((float) input.getMappedValue());
                     } else {
                         // Just add the new data point to continue the trend
                         trendChart.setCurrentValue((float) input.getMappedValue());
-                    }
+                    }*/
                     break;
             }
         }

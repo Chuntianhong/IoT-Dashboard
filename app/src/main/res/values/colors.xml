@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+
     <color name="white">#FFFFFFFF</color>
-    <color name="green">#FF03C04A</color>
-    <color name="gray">#FFA0A0A0</color>
+
+    <color name="light_gray">#FFA0A0A0</color>
 
     <!-- Professional Color Palette -->
     <color name="primary_blue">#727cf5</color>
-    <color name="primary_blue_dark">#FF1565C0</color>
+
     <color name="accent_blue">#FF2196F3</color>
     <color name="light_blue">#FFE3F2FD</color>
     <color name="transparent">#00FFFFFF</color>
     
     <color name="success_green">#FF4CAF50</color>
-    <color name="warning_orange">#FFFF9800</color>
     <color name="error_red">#FFF44336</color>
     
-    <color name="text_primary">#fafbfb</color>
-    <color name="text_secondary">#aab8c5</color>
-    <color name="text_hint">#FF666666</color>
-    
+    <color name="gauge_text_primary">#fafbfb</color>
+    <color name="gauge_text_secondary">#aab8c5</color>
+
     <color name="background_light">#343a3f</color>
     <color name="surface_white">#37404a</color>
     <color name="divider">#FF333333</color>
-    
-    <!-- Gauge Colors -->
-    <color name="gauge_primary">#FF1976D2</color>
-    <color name="gauge_success">#FF4CAF50</color>
-    <color name="gauge_warning">#FFFF9800</color>
-    <color name="gauge_danger">#FFF44336</color>
-    
+
 </resources>

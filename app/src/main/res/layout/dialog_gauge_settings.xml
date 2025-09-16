@@ -20,7 +20,7 @@
             android:layout_marginBottom="20dp"
             android:letterSpacing="0.01"
             android:text="Configure Gauge"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/gauge_text_primary"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Enable Input"
-                android:textColor="@color/text_primary"
+                android:textColor="@color/gauge_text_primary"
                 android:textSize="16sp" />
 
             <Switch
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Data Source"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/gauge_text_primary"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="Input Type"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/gauge_text_primary"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="Gauge Type"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/gauge_text_primary"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -107,7 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="Sensor Name"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/gauge_text_primary"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -118,7 +118,7 @@
             android:layout_marginBottom="20dp"
             android:hint="Enter sensor name"
             android:textColor="@color/white"
-            android:textColorHint="@color/gray" />
+            android:textColorHint="@color/light_gray" />
 
         <!-- Unit -->
         <com.xsz.IoT.view.NunitoTextView
@@ -126,7 +126,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:text="Unit"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/gauge_text_primary"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -137,7 +137,7 @@
             android:layout_marginBottom="20dp"
             android:hint="Enter unit (e.g., PSI, °C, %)"
             android:textColor="@color/white"
-            android:textColorHint="@color/gray" />
+            android:textColorHint="@color/light_gray" />
 
         <!-- Range Configuration -->
         <com.xsz.IoT.view.NunitoTextView
@@ -145,7 +145,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Mapping Range"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/gauge_text_primary"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -172,7 +172,7 @@
                 android:hint="0"
                 android:inputType="numberDecimal"
                 android:textColor="@color/white"
-                android:textColorHint="@color/gray" />
+                android:textColorHint="@color/light_gray" />
 
             <com.xsz.IoT.view.NunitoTextView
                 android:layout_width="wrap_content"
@@ -190,7 +190,7 @@
                 android:hint="100"
                 android:inputType="numberDecimal"
                 android:textColor="@color/white"
-                android:textColorHint="@color/gray" />
+                android:textColorHint="@color/light_gray" />
 
         </LinearLayout>
 
@@ -201,7 +201,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="4dp"
             android:text="Description"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/gauge_text_primary"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -214,7 +214,7 @@
             android:inputType="textMultiLine"
             android:maxLines="2"
             android:textColor="@color/white"
-            android:textColorHint="@color/gray" />
+            android:textColorHint="@color/light_gray" />
 
         <!-- Buttons -->
         <LinearLayout
@@ -230,7 +230,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
                 android:text="Cancel"
-                android:textColor="@color/text_secondary" />
+                android:textColor="@color/gauge_text_secondary" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_save"
