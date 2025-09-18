@@ -2,6 +2,8 @@
 
 An Android application for monitoring and visualizing analog sensor data from ESP32 microcontrollers. The app provides real-time data visualization through customizable gauges, bar charts, and trend charts in a landscape-oriented interface.
 
+![Dashboard](previews/dashboard.gif)
+
 ## 📱 Features
 
 ### 🎛️ Multiple Visualization Types
